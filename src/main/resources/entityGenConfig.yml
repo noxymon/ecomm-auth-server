@@ -1,0 +1,7 @@
+jdbcSettings:
+  url: "jdbc:h2:file:./authentication"
+  username: "sa"
+  password: "password"
+  driverClassName: "org.h2.Driver"
+packageName: "id.web.noxymon.ecommerceauth2.entity"
+tableScanMode: 'All'
