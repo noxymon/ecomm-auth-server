@@ -1,3 +1,8 @@
+### **Introduction**
+
+This repository intended to demonstrate the simplify version of OAuth2.0 3rd party apps. utilize springboot 3, and backed by H2 database with flyway migration to simplify verification.
+
+
 How to run application :
 
 `mvn clean spring-boot:run`
