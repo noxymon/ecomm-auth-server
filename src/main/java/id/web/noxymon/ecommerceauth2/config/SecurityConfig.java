@@ -20,7 +20,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 public class SecurityConfig {
 
     private static final String SQL_LOGIN
-            = "select u.username, up.user_password, u.active " +
+            = "select u.username, up.password, u.active " +
             "from s_users_passwords up " +
             "inner join s_users u on u.id = up.id_user " +
             "where u.username = ?";

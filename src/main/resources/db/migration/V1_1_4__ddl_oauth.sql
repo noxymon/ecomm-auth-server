@@ -42,6 +42,15 @@ CREATE TABLE oauth2_authorization
     refresh_token_issued_at       timestamp     DEFAULT NULL,
     refresh_token_expires_at      timestamp     DEFAULT NULL,
     refresh_token_metadata        text          DEFAULT NULL,
+    authorized_scopes             varchar(1000) DEFAULT NULL,
+    user_code_value               varchar(1000) DEFAULT NULL,
+    user_code_issued_at           timestamp     DEFAULT NULL,
+    user_code_expires_at          timestamp     DEFAULT NULL,
+    user_code_metadata            varchar(1000) DEFAULT NULL,
+    device_code_value             varchar(1000) DEFAULT NULL,
+    device_code_issued_at         timestamp     DEFAULT NULL,
+    device_code_expires_at        timestamp     DEFAULT NULL,
+    device_code_metadata          varchar(1000) DEFAULT NULL,
     PRIMARY KEY (id)
 );
 
@@ -61,4 +70,4 @@ values ('ott_app', 'ott_app', 'ott_app',
         'authorization_code,refresh_token', 'http://example.com,ottapp:/authcode',
         'openid,message.read,message.write',
         '{"@class":"java.util.Collections$UnmodifiableMap","settings.client.require-proof-key":true,"settings.client.require-authorization-consent":true}',
-        '{"@class":"java.util.Collections$UnmodifiableMap","settings.token.reuse-refresh-tokens":true,"settings.token.id-token-signature-algorithm":["org.springframework.security.oauth2.jose.jws.SignatureAlgorithm","RS256"],"settings.token.access-token-time-to-live":["java.time.Duration",300.000000000],"settings.token.refresh-token-time-to-live":["java.time.Duration",3600.000000000]}');
+        '{"@class":"java.util.Collections$UnmodifiableMap","settings.token.reuse-refresh-tokens":true,"settings.token.id-token-signature-algorithm":["org.springframework.security.oauth2.jose.jws.SignatureAlgorithm","RS256"],"settings.token.access-token-time-to-live":["java.time.Duration",300.000000000],"settings.token.refresh-token-time-to-live":["java.time.Duration",3600.000000000],"settings.token.authorization-code-time-to-live":["java.time.Duration",3600.000000000]}');
